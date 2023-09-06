@@ -1,9 +1,8 @@
 userName: nanduagk_u0dlgB
 accessKey: AqGsDonpxv2vhqTUYzMc
-buildName: "Your static build/job name goes here"
-projectName: "Your static project name goes here"
+buildName: "Build"
+projectName: "BrowserStackTest"
 CUSTOM_TAG_1: "You can set a custom Build Tag here"
 framework: testng #Use `cucumber-testng` if you are using Cucumber BDD
 browserstackAutomation: false
 testObservability: true
-...
