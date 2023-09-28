@@ -4,10 +4,33 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+
     <groupId>org.example</groupId>
     <artifactId>BrowserStackTest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <profiles>
+        <profile>
+            <id>sample-test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                            <version>3.0.0-M7</version>
+                        <configuration>
+<!--                            <includes>-->
+<!--                                <include>**/SampleTest*.java</include>-->
+<!--                            </includes>-->
+                            <argLine>
+                                -javaagent:/Users/testvagrant/.m2/repository/com/browserstack/browserstack-java-sdk/1.10.8/browserstack-java-sdk-1.10.8.jar
+                            </argLine>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -23,10 +46,11 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.browserstack/browserstack-java-sdk -->
         <dependency>
             <groupId>com.browserstack</groupId>
             <artifactId>browserstack-java-sdk</artifactId>
-            <version>LATEST</version>
+            <version>1.10.8</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -42,7 +66,6 @@
             <artifactId>browserstack-local-java</artifactId>
             <version>1.1.0</version>
         </dependency>
-
 
     </dependencies>
 
