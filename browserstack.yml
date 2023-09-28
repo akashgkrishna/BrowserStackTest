@@ -1,8 +1,17 @@
 userName: nanduagk_u0dlgB
 accessKey: AqGsDonpxv2vhqTUYzMc
+browserstackURL: "https://nanduagk_u0dlgB:AqGsDonpxv2vhqTUYzMc@hub-cloud.browserstack.com/wd/hub"
 buildName: "Build"
 projectName: "BrowserStackTest"
 CUSTOM_TAG_1: "CustomTag"
 framework: testng #Use `cucumber-testng` if you are using Cucumber BDD
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: Chrome
+    browserVersion: 103.0
 browserstackAutomation: false
 testObservability: true
+debug: true
+browserstack.networkLogs: true
+consoleLogs: info
