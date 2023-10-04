@@ -13,7 +13,7 @@ public class FailureTests {
     }
 
     // 2. Expected Exception Not Thrown Test
-    @Test(expectedExceptions = ArithmeticException.class)
+    @Test(expectedExceptions = ArithmeticException.class, groups = "sanity")
     public void expectedExceptionNotThrownTest() {
         int a = 10;
         int b = 0;
@@ -33,27 +33,27 @@ public class FailureTests {
     }
 
     // 5. Assertion Failure Without Custom Message Test
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void assertionFailureWithoutMessageTest() {
         Assert.assertEquals("abc", "def");
     }
 
     // 6. Array Index Out of Bounds Test
-    @Test
+    @Test(groups = "regression")
     public void arrayIndexOutOfBoundsTest() {
         int[] arr = {1, 2, 3};
         int element = arr[3]; // Intentional array index out of bounds
     }
 
     // 7. Null Pointer Exception Test
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void nullPointerExceptionTest() {
         String str = null;
         int length = str.length(); // Intentional null pointer exception
     }
 
     // 8. Divide by Zero Test
-    @Test
+    @Test(groups = "regression")
     public void divisionByZeroTest() {
         int a = 10;
         int b = 0;
@@ -61,7 +61,7 @@ public class FailureTests {
     }
 
     // 9. Assertion Failure with Arrays Test
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void assertionFailureWithArraysTest() {
         int[] expected = {1, 2, 3};
         int[] actual = {4, 5, 6};
@@ -69,13 +69,13 @@ public class FailureTests {
     }
 
     // 10. Assertion Failure with Strings Test
-    @Test
+    @Test(groups = "regression")
     public void assertionFailureWithStringsTest() {
         Assert.assertEquals("Hello", "World"); // Intentional string comparison failure
     }
 
     // 11. Assertion Failure with Floating-Point Numbers Test
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void assertionFailureWithFloatingPointTest() {
         double expected = 1.0;
         double actual = 2.0;
@@ -83,7 +83,7 @@ public class FailureTests {
     }
 
     // 12. Assertion Failure with Collections Test
-    @Test
+    @Test(groups = "regression")
     public void assertionFailureWithCollectionsTest() {
         java.util.List<String> expected = java.util.Arrays.asList("apple", "banana");
         java.util.List<String> actual = java.util.Arrays.asList("cherry", "date");
@@ -91,13 +91,13 @@ public class FailureTests {
     }
 
     // 13. Assertion Failure with Boolean Test
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void assertionFailureWithBooleanTest() {
         Assert.assertTrue(false); // Intentional true assertion failure
     }
 
     // 14. Assertion Failure with Object Identity Test
-    @Test
+    @Test(groups = "sanity")
     public void assertionFailureWithObjectIdentityTest() {
         Object obj1 = new Object();
         Object obj2 = new Object();

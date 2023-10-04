@@ -3,6 +3,7 @@ package web;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.yaml.snakeyaml.Yaml;
 
@@ -20,6 +21,13 @@ public class BaseTest {
     public void setUp() throws MalformedURLException {
         Map<String, String> browserStackConfig = readBrowserStackConfig();
         driver = getWebDriver(browserStackConfig);
+    }
+
+    @AfterTest
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
     private WebDriver getWebDriver(Map<String, String> browserStackConfig) throws MalformedURLException {

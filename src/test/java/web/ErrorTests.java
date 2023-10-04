@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class ErrorTests {
 
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void divisionByZeroTest() {
         System.out.println("Testing Division by Zero Error");
 
@@ -19,7 +19,7 @@ public class ErrorTests {
         System.out.println(c);
     }
 
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void intentionalAssertionFailureTest() {
         System.out.println("Testing Intentional Assertion Failure");
 
@@ -27,7 +27,7 @@ public class ErrorTests {
         Assert.assertEquals(2, 1, "Intentional assertion fail");
     }
 
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void flakyTest1() throws InterruptedException {
         System.out.println("Testing Flaky Test");
 
@@ -41,12 +41,11 @@ public class ErrorTests {
     }
 
     // This test is flaky because it relies on the output of a random number generator
-    @Test
+    @Test(groups = {"sanity", "regression"})
     public void intermittentTest() {
         System.out.println("Testing Intermittent Test");
 
-        // This test will fail intermittently depending on the state of the system
-        int randomNumber = new Random().nextInt(10);
-        Assert.assertTrue(randomNumber == 5, "Intermittent test failed");
+        int randomNumber = new Random().nextInt(1);
+        Assert.assertEquals(randomNumber ,1,"Intermittent test failed");
     }
 }

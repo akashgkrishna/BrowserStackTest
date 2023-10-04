@@ -1,9 +1,9 @@
 userName: nanduagk_u0dlgB
 accessKey: AqGsDonpxv2vhqTUYzMc
 browserstackURL: "https://nanduagk_u0dlgB:AqGsDonpxv2vhqTUYzMc@hub-cloud.browserstack.com/wd/hub"
-buildName: "Build"
-projectName: "BrowserStackTest"
-CUSTOM_TAG_1: "CustomTag"
+buildName: "Regression Suite"
+projectName: "BrowserStackDemo"
+CUSTOM_TAG_1: "RegressionTests"
 framework: testng #Use `cucumber-testng` if you are using Cucumber BDD
 platforms:
   - os: Windows
