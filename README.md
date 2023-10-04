@@ -7,11 +7,11 @@
 
   </p>
 
-### About The Project
+## About The Project
 
 The "BrowserStack Test" project is a test automation project designed for testing the Browserstack Test Observability.
 
-### Prerequisites
+## Prerequisites
 
 Before you can run your tests on BrowserStack, make sure you have the following prerequisites in place:
 1. **Clone the Repository**: Clone the test automation project repository to your local machine.
@@ -21,7 +21,7 @@ Before you can run your tests on BrowserStack, make sure you have the following 
 2. **Install Dependencies**
 3. **BrowserStack Account:** You need to have an active BrowserStack account. You can sign up at BrowserStack.
 
-### Configuration
+## Configuration
 
 
 1. **browserstack.yml:**
