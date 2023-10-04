@@ -6,9 +6,9 @@
                 <include name="sanity" />
             </run>
         </groups>
-        <classes>
-            <class name="web.FailureTests" />
-        </classes>
+        <packages>
+            <package name="web"/>
+        </packages>
     </test>
 
     <test name="RegressionTests">
@@ -17,8 +17,12 @@
                 <include name="regression" />
             </run>
         </groups>
-        <classes>
-            <class name="web.FailureTests" />
-        </classes>
+        <packages>
+            <package name="web"/>
+        </packages>
+<!--        <classes>-->
+<!--            <class name="web.FailureTests" />-->
+<!--            <class name="web.ErrorTests"/>-->
+<!--        </classes>-->
     </test>
 </suite>
